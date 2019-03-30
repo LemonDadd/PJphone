@@ -1,0 +1,31 @@
+//
+//  PrefixHeader.pch
+//  VPhone
+//
+//  Created by 赖长宽 on 2017/9/19.
+//  Copyright © 2017年 changkuan.lai.com. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#endif /* PrefixHeader_pch */
+//#import "SocketRocketUtility.h"
+//#import "PJPhone.h"
+#import "UIView+ESExtension.h"
+#import "ESSwitchImageview.h"
+#import "SVProgressHUD.h"
+#import <ESPJPhoneSDK/ESPJPhone.h>
+#import "MJExtension.h"
+
+
+//OnEven回调
+#define ESPJPhoneOnEventMessageHandler @"ESPJPhoneSDKOnEventMessageHandler"
+//状态
+#define ESPJPhoneCallStatusChangedNotification @"ESPJPhoneSDKCallStatusChangedNotification"
+
+//注册
+#define ESPJPhoneRegisterStatusNotification @"ESPJPhoneRegisterStatusNotification"

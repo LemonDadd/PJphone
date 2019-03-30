@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ESIncommingVC">
+            <connections>
+                <outlet property="headerImageView" destination="uM5-6b-nMo" id="Z0N-dw-g8v"/>
+                <outlet property="phoneNumLabel" destination="JcD-3v-cY1" id="OUA-0f-6RA"/>
+                <outlet property="view" destination="PWU-XE-tD0" id="RYh-0c-8UU"/>
+                <outlet property="webView" destination="Fv4-hQ-0Fw" id="toC-XN-NOX"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="PWU-XE-tD0">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LAu-D1-MQP">
+                    <rect key="frame" x="0.0" y="550.5" width="375" height="116.5"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                </view>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="head_portrait.png" translatesAutoresizingMaskIntoConstraints="NO" id="uM5-6b-nMo">
+                    <rect key="frame" x="137" y="100" width="100" height="100"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="100" id="IEa-d4-Yil"/>
+                        <constraint firstAttribute="width" constant="100" id="Ru1-UM-8HI"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="18558791580" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JcD-3v-cY1">
+                    <rect key="frame" x="120" y="240" width="134" height="25.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                    <color key="textColor" red="0.32156862749999998" green="0.43137254899999999" blue="0.53333333329999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fv4-hQ-0Fw">
+                    <rect key="frame" x="77.5" y="325.5" width="220" height="65"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="220" id="he1-Qm-YMS"/>
+                        <constraint firstAttribute="height" constant="65" id="kLr-kW-xnQ"/>
+                    </constraints>
+                </webView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lwv-c8-8ec" customClass="ESVerticalButton">
+                    <rect key="frame" x="102.5" y="420.5" width="69" height="80"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="69" id="Kc2-Yh-LXS"/>
+                        <constraint firstAttribute="height" constant="80" id="cGT-Z4-CPz"/>
+                    </constraints>
+                    <state key="normal" title="挂断" image="hang_up1.png"/>
+                    <connections>
+                        <action selector="hangUpAction:" destination="-1" eventType="touchUpInside" id="k1v-0F-Uxq"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nXr-lS-RO1" customClass="ESVerticalButton">
+                    <rect key="frame" x="205.5" y="420.5" width="67" height="80"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="67" id="1Ms-Jp-XQi"/>
+                        <constraint firstAttribute="height" constant="80" id="sQ9-GK-0nA"/>
+                    </constraints>
+                    <state key="normal" title="接听" image="pick_up1.png"/>
+                    <connections>
+                        <action selector="answerAction:" destination="-1" eventType="touchUpInside" id="KQJ-Bn-4KM"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="0.61176470588235299" green="0.73333333333333328" blue="0.84705882352941175" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="uM5-6b-nMo" firstAttribute="top" secondItem="PWU-XE-tD0" secondAttribute="top" constant="100" id="0Hd-Cg-XPP"/>
+                <constraint firstItem="lwv-c8-8ec" firstAttribute="leading" secondItem="Fv4-hQ-0Fw" secondAttribute="leading" constant="25" id="4yT-6t-uuA"/>
+                <constraint firstItem="Fv4-hQ-0Fw" firstAttribute="top" secondItem="JcD-3v-cY1" secondAttribute="bottom" constant="60" id="9PZ-VE-iR9"/>
+                <constraint firstItem="LAu-D1-MQP" firstAttribute="top" secondItem="lwv-c8-8ec" secondAttribute="bottom" constant="50" id="HTz-s2-kMW"/>
+                <constraint firstItem="lwv-c8-8ec" firstAttribute="top" secondItem="Fv4-hQ-0Fw" secondAttribute="bottom" constant="30" id="PAC-nv-Zy6"/>
+                <constraint firstItem="nXr-lS-RO1" firstAttribute="trailing" secondItem="Fv4-hQ-0Fw" secondAttribute="trailing" constant="-25" id="PV2-P5-Joa"/>
+                <constraint firstItem="LAu-D1-MQP" firstAttribute="leading" secondItem="PWU-XE-tD0" secondAttribute="leading" id="RJT-aW-8sB"/>
+                <constraint firstItem="uM5-6b-nMo" firstAttribute="centerX" secondItem="PWU-XE-tD0" secondAttribute="centerX" id="Zm4-m2-Q7c"/>
+                <constraint firstItem="JcD-3v-cY1" firstAttribute="centerX" secondItem="PWU-XE-tD0" secondAttribute="centerX" id="ajb-UG-kbs"/>
+                <constraint firstItem="JcD-3v-cY1" firstAttribute="top" secondItem="uM5-6b-nMo" secondAttribute="bottom" constant="40" id="hby-Nd-qAu"/>
+                <constraint firstItem="Fv4-hQ-0Fw" firstAttribute="centerX" secondItem="PWU-XE-tD0" secondAttribute="centerX" id="lVe-RO-lMv"/>
+                <constraint firstItem="nXr-lS-RO1" firstAttribute="top" secondItem="lwv-c8-8ec" secondAttribute="top" id="rmD-yq-eIX"/>
+                <constraint firstAttribute="bottom" secondItem="LAu-D1-MQP" secondAttribute="bottom" id="vJ2-Oz-szt"/>
+                <constraint firstAttribute="trailing" secondItem="LAu-D1-MQP" secondAttribute="trailing" id="zF2-tb-bx8"/>
+            </constraints>
+            <point key="canvasLocation" x="23.5" y="26.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="hang_up1.png" width="100" height="100"/>
+        <image name="head_portrait.png" width="160" height="160"/>
+        <image name="pick_up1.png" width="100" height="100"/>
+    </resources>
+</document>
